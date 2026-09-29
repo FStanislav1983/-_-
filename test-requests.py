@@ -40,7 +40,7 @@ def get_exchange_rate(base_cur: str, target_cur: str):
             print(f"Ошибка при ожидании ответа от {url_er}:\n{e1}")
             resp = requests.get(url_cdn, timeout=10)
             resp.raise_for_status()
-            payload = resp.json()
+            payload = resp.json()  # Преобразование строки JSON во вложенные структуры данных - словари, списки и т.д.
             base_cur = base_cur.lower()  # Преобразование текста в нижний регистр
             target_cur = target_cur.lower()  # Преобразование текста в нижний регистр
 
