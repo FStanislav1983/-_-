@@ -101,8 +101,8 @@ class CurrencyApp:
         self.currencies2.configure(state="disabled")  # Отключаем второй комбобокс повторно
         self.currencies3.set("")  # Очистить поле "Целевая валюта"
         self.currencies3.configure(state="disabled")  # Отключаем третий комбобокс повторно
-        self.progress.config(value=0)
-        self.status_label.config(text="Ожидание запуска...")
+        self.progress.config(value=0)  # Сбрасывание состояния прогресс-бар
+        self.status_label.config(text="Ожидание запуска...")  # Возврат строки статуса в исходное состояние
 
     def on_select_currency1(self, _):
         """Метод выбора для списка первой базовой валюты"""
